@@ -31,7 +31,7 @@ model Product {
   description        String
   imageUrl           String
   price              Decimal    @db.Decimal(10, 2)
-  descountPercentage Int        @default(0)
+  discountPercentage Int        @default(0)
   restaurantId       String
   restaurant         Restaurant @relation(fields: [restaurantId], references: [id]) // o restaurant id é o id de um restaurant, ou seja, uma foreign key
   categoryId         String
